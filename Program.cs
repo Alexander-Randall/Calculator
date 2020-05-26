@@ -17,7 +17,7 @@ namespace Calculator
                 Operator inputOperator = GetOperator();
                 int secondNum = GetInteger();
                 //
-                OpeatorOutput operatorOutput = GetOpeatorOutput(inputOperator, firstNum, secondNum);
+                OperatorOutput operatorOutput = GetOpeatorOutput(inputOperator, firstNum, secondNum);
 
                 Console.WriteLine("the " + operatorOutput.outputType + " of " + firstNum + " and " + secondNum + " is  " + operatorOutput.output);
                 if (!AskForContinue())
@@ -86,7 +86,7 @@ namespace Calculator
             return toReturn;
 
         }
-        static OpeatorOutput GetOpeatorOutput(Operator inputOperator, int firstNum, int secondNum)
+        static OperatorOutput GetOpeatorOutput(Operator inputOperator, int firstNum, int secondNum)
         {
             int output = 0;
             string outputType = "";
@@ -120,7 +120,7 @@ namespace Calculator
                 outputType = "modulus";
             }
 
-            return new OpeatorOutput(output, outputType);
+            return new OperatorOutput(output, outputType);
         }
         public static bool AskForContinue()
         {

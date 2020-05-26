@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Calculator
 {
-    class OpeatorOutput
+    class OperatorOutput
     {
         public int output;
         public string outputType;
         
-        public OpeatorOutput(int output, string outputType)
+        public OperatorOutput(int output, string outputType)
         {
             this.output = output;
             this.outputType = outputType;
